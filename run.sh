@@ -1,0 +1,1 @@
+docker run --rm --user 1002030000:0 -it viya:latest
