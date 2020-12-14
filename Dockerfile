@@ -10,7 +10,9 @@ RUN chmod +x /entry.sh
 
 RUN yum -y install sudo policycoreutils-python-utils; 
 RUN groupadd --gid 1001 sas; \
-  useradd -l --gid 1001 --home-dir /home/osuser --create-home --uid 1001 osuser; \
+  useradd -l --gid 1001 --home-dir /home/osuser --create-home --uid 1010 osuser; \
   echo 'osuser ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers;
 
-USER 0 
+USER 1010
+
+CMD ["sh", "-c", "tail -f /dev/null"]
