@@ -13,5 +13,3 @@ title: Hallo
 $$
     x^2
 $$
-
-test
